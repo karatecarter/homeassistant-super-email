@@ -1,0 +1,40 @@
+{
+  "config": {
+    "error": {
+      "auth": "The auth information provided is incorrect.",
+      "sheet": "Invalid sheet_name."
+    },
+    "step": {
+      "user": {
+        "data": {
+      "json_key": "Paste in full text from JSON file"
+        },
+        "description": "Enter Gspread JSON Authorization Data.",
+        "title": "API Key"
+      },
+      "sheetname": {
+        "data": {
+          "sheet_name": "Spreadsheet Name"
+        },
+        "description": "Enter Gspread Sheet Name.",
+        "title": "Sheet Name"
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "invalid_path": "The path provided is not valid. Should be in the format `user/repo-name` and should be a valid github repository."
+    },
+    "step": {
+      "init": {
+        "title": "Manage Repos",
+        "data": {
+          "repos": "Existing Repos: Uncheck any repos you want to remove.",
+          "path": "New Repo: Path to the repository e.g. home-assistant-core",
+          "name": "New Repo: Name of the sensor."
+        },
+        "description": "Remove existing repos or add a new repo."
+      }
+    }
+  }
+}
