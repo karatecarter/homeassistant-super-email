@@ -4,7 +4,7 @@
   "dependencies": [],
   "documentation": "http://github.com/karatecarter/homeassistant-super-email",
   "domain": "super_email",
-  "iot_class": "cloud_polling",
+  "iot_class": "cloud_push",
   "name": "Super Email",
   "requirements": [],
   "version": "1.0.0"

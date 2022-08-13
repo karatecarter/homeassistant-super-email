@@ -27,6 +27,7 @@ CONF_SCHEMA = vol.Schema(
         vol.Required("imap_port", msg="IMAP Port", default=993): cv.positive_int,
         vol.Required("username"): cv.string,
         vol.Required("password"): cv.string,
+        vol.Required("folder", default="INBOX"): cv.string,
     }
 )
 
