@@ -135,11 +135,6 @@ class EmailSensor(Entity):
         return self._imap_session
 
     @property
-    def hass(self) -> HomeAssistantType:
-        """Home Assistant Instance"""
-        return self._hass
-
-    @property
     def available(self) -> bool:
         """Return True if entity is available."""
         return self._available
