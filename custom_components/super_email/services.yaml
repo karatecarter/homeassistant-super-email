@@ -1,0 +1,69 @@
+
+save_latest_email:
+    name: Save Latest Email To Filesystem
+    description: Download latest email as .EML file
+    target:
+      entity:
+        integration: super_email
+        domain: sensor
+    fields:
+       save_to_folder:
+          name: Save To Folder
+          description: Path to save .EML file to (Folder must already exist)
+          required: true
+          example: config/emails
+          selector:
+            text:
+       filename:
+          name: Save As Filename
+          description: Filename to save
+          required: true
+          example: email.eml
+          selector:
+            text:
+
+send_email:
+    name: Send Email With Attachments
+    description: Send email attaching all files in a given folder
+    fields:
+       folder:
+          name: Attachment Source Folder
+          description: Folder containing files to be attached to email
+          required: true
+          example: config/emails
+          selector:
+            text:
+       subject:
+          name: Email Subject
+          description: Subject of email
+          required: true
+          example: Email from Home Assistant
+          selector:
+            text:
+       body:
+          name: Email Body
+          description: Body of email
+          required: false
+          selector:
+            text:
+       sender:
+          name: Email Sender
+          description: From Address for email
+          required: true
+          example: Home Assistant <ha@homeassistant.local>
+          selector:
+            text:
+       recipient:
+          name: Email Recipient
+          description: To Address for email
+          required: true
+          example: User <user@homeassistant.local>
+          selector:
+            text:
+       delete_files_after_sending:
+          name: Delete Files Afrter Sending
+          description: Delete files in the attachment folder after sending email
+          required: true
+          default: false
+          selector:
+             boolean:
