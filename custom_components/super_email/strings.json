@@ -1,29 +1,27 @@
 {
   "config": {
     "error": {
-      "auth": "The auth information provided is incorrect.",
-      "sheet": "Invalid sheet_name."
+      "auth": "Error connecting to email servers"
     },
     "step": {
       "user": {
         "data": {
-      "json_key": "Paste in full text from JSON file"
+          "smtp_server": "SMTP Server (ex. 'smtp.gmail.com')",
+          "smtp_port": "SMTP Server Port",
+          "imap_server": "IMAP Server (ex. 'imap.gmail.com')",
+          "imap_port": "IMAP Server Port",
+          "username": "Username for IMAP & SMTP servers",
+          "password": "Password for IMAP & SMTP servers",
+          "folder": "Email folder to monitor"
         },
-        "description": "Enter Gspread JSON Authorization Data.",
-        "title": "API Key"
-      },
-      "sheetname": {
-        "data": {
-          "sheet_name": "Spreadsheet Name"
-        },
-        "description": "Enter Gspread Sheet Name.",
-        "title": "Sheet Name"
+        "description": "Enter email connection and monitoring parameters",
+        "title": "Super Email"
       }
     }
   },
   "options": {
     "error": {
-      "invalid_path": "The path provided is not valid. Should be in the format `user/repo-name` and should be a valid github repository."
+      "invalid_path": ""
     },
     "step": {
       "init": {
