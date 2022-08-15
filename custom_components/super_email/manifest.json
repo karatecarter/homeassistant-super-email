@@ -6,6 +6,6 @@
   "domain": "super_email",
   "iot_class": "cloud_push",
   "name": "Super Email",
-  "requirements": [],
+  "requirements": ["imaplib2"],
   "version": "1.0.0"
 }
