@@ -314,7 +314,8 @@ class Idler(object):
                 self.email_sensor.imap_session.idle(callback=callback)
             except IMAP4_SSL.abort as ex:
                 # connection lost, kill thread and attempt restart
-                _LOGGER.error(ex)
+                _LOGGER.info(ex)
+                self.email_sensor._available = False
                 asyncio.run_coroutine_threadsafe(
                     self.email_sensor.async_try_reconnect(),
                     self._hass.loop,
